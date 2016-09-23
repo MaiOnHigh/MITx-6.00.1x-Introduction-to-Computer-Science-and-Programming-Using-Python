@@ -23,3 +23,58 @@ for i in range(len(s)):
     vowelscount +=1
 
 print ("Number of vowels: " + str(vowelscount))
+
+"""
+ Problem 2
+(10/10 points)
+
+Assume s is a string of lower case characters.
+
+Write a program that prints the number of times the string 'bob' occurs in s. For example, 
+if s = 'azcbobobegghakl', then your program should print
+
+Number of times bob occurs is: 2
+"""
+vowelscount = 0
+for i in range(len(s)):
+  if s[i:i+3] == "bob" :
+    vowelscount +=1
+  
+
+print ("Number of times bob occurs is:" + str(vowelscount)) 
+
+"""
+ Problem 3
+(15/15 points)
+
+Assume s is a string of lower case characters.
+
+Write a program that prints the longest substring of s in which the letters occur in alphabetical order. 
+For example, if s = 'azcbobobegghakl', then your program should print
+
+Longest substring in alphabetical order is: beggh
+
+In the case of ties, print the first substring. For example, if s = 'abcbcd', then your program should print
+
+Longest substring in alphabetical order is: abc
+
+Note: This problem may be challenging. We encourage you to work smart. If you've spent more than a few 
+hours on this problem, we suggest that you move on to a different part of the course. If you have time, come back to 
+this problem after you've had a break and cleared your head.
+
+"""
+fin=""
+s_pos =0
+while s_pos < len(s):
+    n=1
+    lng=" "
+    for c in s[s_pos:]:
+        if c >= lng[n-1]:
+            lng+=c
+            n+=1
+        else :
+            break
+    if len(lng) > len(fin):
+        fin= lng
+    s_pos+=1    
+print ("Longest string in alphabetical order is: " + fin)
