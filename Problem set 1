@@ -1,0 +1,25 @@
+"""
+Problem 1
+(10/10 points)
+
+Assume s is a string of lower case characters.
+
+Write a program that counts up the number of vowels contained in the string s. 
+Valid vowels are: 'a', 'e', 'i', 'o', and 'u'. For example, if s = 'azcbobobegghakl', your program should print:
+
+Number of vowels: 5
+"""
+vowelscount = 0
+for i in range(len(s)):
+  if s[i] == "a":
+    vowelscount +=1
+  elif s[i]=="e":
+    vowelscount +=1
+  elif s[i]=="i":
+    vowelscount +=1
+  elif s[i]=="o":
+    vowelscount +=1
+  elif s[i]=="u":
+    vowelscount +=1
+
+print ("Number of vowels: " + str(vowelscount))
